@@ -1,5 +1,7 @@
 from mylib.lib import plot_count, plot_scatter, plot_histogram
 
+# from mylib.lib import read_dataset
+
 import matplotlib.pyplot as plt
 
 
@@ -19,5 +21,10 @@ def save_plot_scatter(cardio_data):
 
 
 # if __name__ == "__main__":
+#     import os,sys
+#     print(sys.path)
+#     print(os.getcwd())
+#     os.chdir('/workspaces/IDS706_Individual_Proj1_ZH')
+#     sys.path.append("/workspaces/IDS706_w3_Individual_Project1")
 #     PATH = "./CardioGoodFitness.csv"
 #     save_plot_count(read_dataset(PATH))

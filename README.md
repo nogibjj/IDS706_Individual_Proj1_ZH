@@ -57,6 +57,7 @@ From the above plots and forms, we can conclude(infer) that TM798 is the more ex
 - Learned about the Python package and searching path. In Python, you can search for modules or packages in different directories using the sys.path list. `sys.path` is a list of directory names that Python uses to search for modules and packages when you import them in your code. You can modify this list to include additional directories for Python to search.
 - Always organize your package structure clearly! Put the `lib.py`, `main.py`, etc. outside the directories.
 - Watch out the current path you are in to execute the python script because it decides the relative path relationship.
+- Github CI/CD path is different from codespace! They have different rootdir.
 - Solutions
     - Use `sys.path.append('/workspace/project')` to add path for python searching
     - Use `os.chdir('/workspaces/project')` to keep the execution path is the base dir

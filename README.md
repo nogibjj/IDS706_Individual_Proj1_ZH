@@ -1,6 +1,6 @@
 [![Format](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/format.yml)[![Install](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/install.yml)[![Lint](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/lint.yml)[![Test](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Individual_Proj1_ZH/actions/workflows/test.yml)
 
-# About
+# Purpose
 This problem is from Kaggle. The market research team at AdRight is assigned the task to identify the profile of the typical customer for each treadmill product offered by CardioGood Fitness. The market research team decides to investigate whether there are differences across the product lines with respect to customer characteristics. The team decides to collect data on individuals who purchased a treadmill at a CardioGoodFitness retail store during the prior three months. The data are stored in the CardioGoodFitness.csv file. The team identifies the following customer variables to study: product purchased, TM195, TM498, or TM798; gender; age, in years;education, in years; relationship status, single or partnered; annual household income ($); average number of times the customer plans to use the treadmill each week; average number of miles the customer expects to walk/run each week; and self-rated fitness on an 1-to-5 scale, where 1 is poor shape and 5 is excellent shape. Perform descriptive analytics to create a customer profile for each CardioGood Fitness treadmill product line.
 
 # Requirements
@@ -20,4 +20,35 @@ The project structure must include the following files:
 - Pinned requirements.txt
 - GitHub Actions performs all four Makefile commands with badges for each one in the README.md
 
-# Result
+# CI/CD
+
+## Make lint
+Use Ruff instead of previous Pylint [Ignore F403 and F405 because of using `import *`]
+
+![Alt text](image-1.png)
+
+## Make test
+Run all tests. Tested by using nbval plugin for pytest in `.ipynb` and pytest for python script (`lib.py` and `main.py`)  
+The coverage of testing is `100%`
+![Alt text](image.png)
+
+## Make format
+Formats code with Python black  
+
+![Alt text](image-4.png)
+
+# Output
+## Descriptive statistics
+![Alt text](image-3.png)
+
+## Visualization
+### Box plot
+![Alt text](./results/boxplot.png)
+### Histogram plot
+![Alt text](./results/count.png)
+![Alt text](./results/histogram.png)
+### Scatter plot
+![Alt text](./results/scatter.png)
+
+# Conclusion
+From the above plots and forms, we can conclude(infer) that TM798 is the more expensive and better one.

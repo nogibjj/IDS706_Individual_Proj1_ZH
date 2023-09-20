@@ -1,9 +1,9 @@
-import pytest
 from main import *
-import os, sys
+import os
 import pandas as pd
 
 cardio_data = pd.read_csv("CardioGoodFitness.csv")
+
 
 def test_save_plot_count():
     save_plot_count(cardio_data)

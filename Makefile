@@ -4,12 +4,18 @@ install:
 
 test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest --nbval *.ipynb
 
 format:	
+	nbqa black *.ipynb
 	black *.py 
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+	# pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+	# Use Ruff instead of pylint
+	nbqa ruff *.ipynb --ignore F403,F405
+	ruff check *.py --ignore F403,F405,E501
+	
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile

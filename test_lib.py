@@ -7,12 +7,7 @@ from mylib.lib import (
     plot_scatter,
 )
 
-import pytest
-import os
-import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 
 
 def test_plot_boxplot():
